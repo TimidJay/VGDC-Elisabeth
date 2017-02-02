@@ -188,9 +188,147 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1877098041443362, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
+      propertyPath: m_TagString
+      value: InvSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830115366839268, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
+      propertyPath: m_TagString
+      value: InvSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037454276974970, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
+      propertyPath: m_TagString
+      value: InvSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509694176100184, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
+      propertyPath: m_TagString
+      value: InvSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168950899728740, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
+      propertyPath: m_TagString
+      value: InvSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515044970814330, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
+      propertyPath: m_TagString
+      value: Doll
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &235687112 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1515044970814330, guid: ea851b72376c6ca45a25eba040dcf143,
+    type: 2}
+  m_PrefabInternal: {fileID: 235687111}
+--- !u!1 &235687113 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1168950899728740, guid: ea851b72376c6ca45a25eba040dcf143,
+    type: 2}
+  m_PrefabInternal: {fileID: 235687111}
+--- !u!1 &235687114 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1509694176100184, guid: ea851b72376c6ca45a25eba040dcf143,
+    type: 2}
+  m_PrefabInternal: {fileID: 235687111}
+--- !u!1 &235687115 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1037454276974970, guid: ea851b72376c6ca45a25eba040dcf143,
+    type: 2}
+  m_PrefabInternal: {fileID: 235687111}
+--- !u!1 &235687116 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1830115366839268, guid: ea851b72376c6ca45a25eba040dcf143,
+    type: 2}
+  m_PrefabInternal: {fileID: 235687111}
+--- !u!1 &235687117 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1877098041443362, guid: ea851b72376c6ca45a25eba040dcf143,
+    type: 2}
+  m_PrefabInternal: {fileID: 235687111}
+--- !u!61 &235687118
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235687112}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!61 &235687119
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235687113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!61 &235687120
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235687114}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!61 &235687121
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235687115}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!61 &235687122
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235687116}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!61 &235687123
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235687117}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1 &236410716
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +540,7 @@ GameObject:
   - component: {fileID: 803289860}
   - component: {fileID: 803289863}
   - component: {fileID: 803289862}
+  - component: {fileID: 803289861}
   m_Layer: 5
   m_Name: Bed
   m_TagString: Untagged
@@ -428,6 +567,20 @@ RectTransform:
   m_AnchoredPosition: {x: -450, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &803289861
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803289859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!114 &803289862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,8 +600,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -545,6 +698,7 @@ GameObject:
   - component: {fileID: 1039385552}
   - component: {fileID: 1039385555}
   - component: {fileID: 1039385554}
+  - component: {fileID: 1039385553}
   m_Layer: 5
   m_Name: Door
   m_TagString: Untagged
@@ -571,6 +725,20 @@ RectTransform:
   m_AnchoredPosition: {x: 550, y: 0}
   m_SizeDelta: {x: 16, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &1039385553
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1039385551}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!114 &1039385554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +941,7 @@ GameObject:
   - component: {fileID: 1752581527}
   m_Layer: 0
   m_Name: puzzleControlDummy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
