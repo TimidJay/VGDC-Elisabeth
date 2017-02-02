@@ -42,6 +42,7 @@ public class puzzleControl : MonoBehaviour
                 //Starting phase of room
             }
             //This portion for flavor text and interactions that are the same for multiple phases
+            if (puzzlePhase == 12) { currentPuzzle += 1; }
         }
         else if (room == "Room1Perfect")
         {
@@ -54,7 +55,7 @@ public class puzzleControl : MonoBehaviour
     void setInvItem(string item){selectedInvItem = item;}
 
     void nextPuzzle(){currentPuzzle += 1;}
-    void nextPhase(){puzzlePhase += 1;}
+    public void nextPhase(){puzzlePhase += 1;}
 
 
     public int getPuzzle(){return currentPuzzle;}

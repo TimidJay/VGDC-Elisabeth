@@ -27,6 +27,7 @@ public class buttonOperations : MonoBehaviour {
             {
                 girl.GetComponent<puzzleControl>().addToInv(item);
             }
+            girl.GetComponent<puzzleControl>().nextPhase();
             print(solvingMessage);
         }
     }
