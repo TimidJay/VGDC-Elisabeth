@@ -23,5 +23,6 @@ public class inventoryItems : MonoBehaviour {
     public void setItem (string itemName)
     {
         Item = itemName;
+        this.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = itemName;
     }
 }

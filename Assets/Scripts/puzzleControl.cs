@@ -47,7 +47,6 @@ public class puzzleControl : MonoBehaviour
         {
             //same as puzzlePhase==12 and any flavor texts that function at that time
         }
-        print(room);
 
     }
     //Gets and sets
@@ -88,6 +87,7 @@ public class puzzleControl : MonoBehaviour
             if (!alreadyThere && empty > -1)
             {
                 inventory[empty] = s;
+                GameObject.Find("IB" + (empty + 1).ToString()).GetComponent<inventoryItems>().setItem(s);
             }
     }
 
@@ -98,6 +98,7 @@ public class puzzleControl : MonoBehaviour
             if (inventory[i] == s)
             {
                 inventory[i] = "empty";
+                GameObject.Find("IB" + (inventory[i] + 1).ToString()).GetComponent<inventoryItems>().setItem("empty");
                 break;
             }
         }
