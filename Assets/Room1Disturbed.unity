@@ -669,7 +669,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1344830821
+--- !u!1001 &1254446434
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -849,4 +849,4 @@ Transform:
 RectTransform:
   m_PrefabParentObject: {fileID: 224736389250764262, guid: ea851b72376c6ca45a25eba040dcf143,
     type: 2}
-  m_PrefabInternal: {fileID: 1344830821}
+  m_PrefabInternal: {fileID: 1254446434}
