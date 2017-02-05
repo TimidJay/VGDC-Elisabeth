@@ -5,12 +5,13 @@ using UnityEngine;
 public class buttonOperations : MonoBehaviour {
 
     public int puzzle, phaseNeeded;
-    public string beforeMessage, solvingMessage, afterMessage,item;
-    private GameObject girl;
+    public string beforeMessage, solvingMessage, afterMessage,item,neededItem;
+    private GameObject girl,textBox;
 
 	// Use this for initialization
 	void Start () {
         girl = GameObject.FindGameObjectWithTag("Player");
+        textBox = GameObject.FindGameObjectWithTag("Textbox");
 	}
 	
 	// Update is called once per frame
@@ -20,15 +21,27 @@ public class buttonOperations : MonoBehaviour {
 
     void OnMouseDown()
     {
-        print("true");
-        if (phaseNeeded == girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle())
+        if (phaseNeeded == girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle() && neededItem == girl.GetComponent<puzzleControl>().getInvItem())
         {
-            if (item != "empty")
+            girl.GetComponent<puzzleControl>().nextPhase();
+            if (neededItem != "Empty")
+            {
+                girl.GetComponent<puzzleControl>().removeFromInv(neededItem);
+            }
+            girl.GetComponent<puzzleControl>().setInvItem("Empty");
+            if (item != "Empty")
             {
                 girl.GetComponent<puzzleControl>().addToInv(item);
             }
-            girl.GetComponent<puzzleControl>().nextPhase();
-            print(solvingMessage);
+            textBox.GetComponent<textControl>().setText(solvingMessage);
+        }
+        else if ((phaseNeeded >= girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle()) || puzzle > girl.GetComponent<puzzleControl>().getPuzzle())
+        {
+            textBox.GetComponent<textControl>().setText(beforeMessage);
+        }
+        else if ((phaseNeeded < girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle()) || puzzle < girl.GetComponent<puzzleControl>().getPuzzle())
+        {
+            textBox.GetComponent<textControl>().setText(afterMessage);
         }
     }
 }

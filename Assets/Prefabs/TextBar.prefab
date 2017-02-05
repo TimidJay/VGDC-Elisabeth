@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 224764858710328024}
   - component: {fileID: 222509376670089790}
   - component: {fileID: 114009949856101258}
+  - component: {fileID: 114714211071710976}
   m_Layer: 5
   m_Name: TextBar
-  m_TagString: Untagged
+  m_TagString: Textbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +106,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New text that goes like this and goes on and on and on and...
+--- !u!114 &114714211071710976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1556555159819612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c9aa7fe112dff42a31590268e84860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222077168875475264
 CanvasRenderer:
   m_ObjectHideFlags: 1

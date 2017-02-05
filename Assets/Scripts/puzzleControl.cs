@@ -20,12 +20,12 @@ public class puzzleControl : MonoBehaviour
         currentPuzzle = 1;
         puzzlePhase = 1;
         //Set to inventory item when you click on that inv slot
-        selectedInvItem = "empty";
+        selectedInvItem = "Empty";
         
         inventory = new string[5];
         for (int i = 0; i < inventory.Length; i++)
         {
-            inventory[i] = "empty";
+            inventory[i] = "Empty";
         }
     }
 
@@ -48,11 +48,12 @@ public class puzzleControl : MonoBehaviour
         {
             //same as puzzlePhase==12 and any flavor texts that function at that time
         }
-
     }
     //Gets and sets
-    void setThingClicked(string clicked){thingClicked = clicked;}
-    void setInvItem(string item){selectedInvItem = item;}
+    public void setThingClicked(string clicked){thingClicked = clicked;}
+
+    //Selects the currently selected inventory item
+    public void setInvItem(string item){selectedInvItem = item;}
 
     void nextPuzzle(){currentPuzzle += 1;}
     public void nextPhase(){puzzlePhase += 1;}
@@ -74,7 +75,7 @@ public class puzzleControl : MonoBehaviour
             bool alreadyThere = false;
             for (int i = 0; i < inventory.Length; i++)
             {
-                if (inventory[i] == "empty")
+                if (inventory[i] == "Empty")
                 {
                     empty = i;
                     break;
@@ -98,12 +99,11 @@ public class puzzleControl : MonoBehaviour
         {
             if (inventory[i] == s)
             {
-                inventory[i] = "empty";
-                GameObject.Find("IB" + (inventory[i] + 1).ToString()).GetComponent<inventoryItems>().setItem("empty");
+                inventory[i] = "Empty";
+                GameObject.Find("IB"+(i+1).ToString()).GetComponent<inventoryItems>().setItem("Empty");
                 break;
             }
         }
-        print("Item not found");
     }
 
     public bool itemCheck(string neededItem)

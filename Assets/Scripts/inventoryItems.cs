@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class inventoryItems : MonoBehaviour {
     private string Item;
-    
+    private GameObject girl;
     
 	// Begins the script with Items as "Empty by default"
 	void Start ()
     {
         Item = "Empty";
-
+        girl = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// returns the item type
@@ -24,5 +24,9 @@ public class inventoryItems : MonoBehaviour {
     {
         Item = itemName;
         this.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = itemName;
+    }
+    private void OnMouseDown()
+    {
+        girl.GetComponent<puzzleControl>().setInvItem(Item);
     }
 }
