@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 1752581529}
   - component: {fileID: 1752581528}
   - component: {fileID: 1752581527}
+  - component: {fileID: 1752581530}
   m_Layer: 0
   m_Name: puzzleControlDummy
   m_TagString: Player
@@ -870,6 +871,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752581530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752581526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e791c2ee61de4514a9d640fc9919ad60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: 0, y: 0}
 --- !u!224 &1958057707 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224736389250764262, guid: ea851b72376c6ca45a25eba040dcf143,

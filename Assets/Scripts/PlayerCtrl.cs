@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour {
     public Vector2 targetPosition;
-	
-	// Update is called once per frame
-	void Update () {
+    private GameObject bed;
+    private void Start()
+    {
+        bed = GameObject.FindGameObjectWithTag("Bed");
+    }
+    // Update is called once per frame
+    void Update () {
 		if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
