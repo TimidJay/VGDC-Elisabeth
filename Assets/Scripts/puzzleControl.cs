@@ -63,7 +63,7 @@ public class puzzleControl : MonoBehaviour
     public int getPhase(){return puzzlePhase;}
     public string getInvItem(){return selectedInvItem;}
     public string[] getInv() { return inventory; }
-    
+    public bool hasDoll() { return true; }
 
     public void addToInv(string s)
     {

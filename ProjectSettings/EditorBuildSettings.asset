@@ -6,6 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/TestDirect.unity
+  - enabled: 1
     path: Assets/Room1Disturbed.unity
   - enabled: 1
-    path: Assets/TestDirect.unity
+    path: Assets/TestRoom.unity

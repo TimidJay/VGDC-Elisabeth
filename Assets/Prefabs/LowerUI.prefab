@@ -110,6 +110,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224736389250764262}
+  - component: {fileID: 114033180133382008}
   m_Layer: 5
   m_Name: LowerUI
   m_TagString: Untagged
@@ -146,6 +147,7 @@ GameObject:
   - component: {fileID: 114444648946339866}
   - component: {fileID: 114230817145192346}
   - component: {fileID: 61167102632164930}
+  - component: {fileID: 114131179342489450}
   m_Layer: 5
   m_Name: Doll
   m_TagString: Doll
@@ -319,7 +321,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 50, y: 50}
 --- !u!61 &61328037032148278
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -441,6 +443,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114033180133382008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425287452970566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e57ab75f0509c49828638436e7e7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114033350488309978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -528,6 +541,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114131179342489450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515044970814330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26a79ebc5f83d142b1ce4b57692ea52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dollScene: TestDirect
 --- !u!114 &114158562867192390
 MonoBehaviour:
   m_ObjectHideFlags: 1

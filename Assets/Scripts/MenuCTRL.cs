@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuCTRL : MonoBehaviour {
-
 	public void LoadScene(string scene) {
 		SceneManager.LoadScene (scene);
 	}
