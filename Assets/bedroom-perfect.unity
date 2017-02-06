@@ -456,6 +456,7 @@ MonoBehaviour:
   afterMessage: Already did the thing
   item: Doll
   neededItem: Empty
+  lastPhase: 0
 --- !u!61 &806748770
 BoxCollider2D:
   m_ObjectHideFlags: 0
