@@ -6,6 +6,7 @@ public class buttonOperations : MonoBehaviour {
 
     public int puzzle, phaseNeeded;
     public string beforeMessage, solvingMessage, afterMessage,item,neededItem;
+    public bool lastPhase;
     private GameObject girl,textBox;
 
 	// Use this for initialization
@@ -23,7 +24,14 @@ public class buttonOperations : MonoBehaviour {
     {
         if (phaseNeeded == girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle() && neededItem == girl.GetComponent<puzzleControl>().getInvItem())
         {
-            girl.GetComponent<puzzleControl>().nextPhase();
+            if (!lastPhase)
+            {
+                girl.GetComponent<puzzleControl>().nextPhase();
+            }
+            else
+            {
+                girl.GetComponent<puzzleControl>().nextPuzzle();
+            }
             if (neededItem != "Empty")
             {
                 girl.GetComponent<puzzleControl>().removeFromInv(neededItem);

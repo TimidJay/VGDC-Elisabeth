@@ -32,21 +32,17 @@ public class puzzleControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        room = SceneManager.GetActiveScene().name;
-        if (room == "Room1Perfect"&&currentPuzzle==1)
+        string[] invUI= new string[5];
+        for (int i = 0; i < 5; i++)
         {
-            //12 phases total - refer to sheet
-            //This portion for puzzle solution actions
-            if (puzzlePhase == 1)
-            {
-                //Starting phase of room
-            }
-            //This portion for flavor text and interactions that are the same for multiple phases
-            if (puzzlePhase == 12) { currentPuzzle += 1; }
+            invUI[i] = GameObject.Find("IB"+(i+1).ToString()).GetComponent<inventoryItems>().getItem();
         }
-        else if (room == "Room1Perfect")
+        if (inventory != invUI)
         {
-            //same as puzzlePhase==12 and any flavor texts that function at that time
+            for (int i = 0; i < 5; i++)
+            {
+                GameObject.Find("IB" + (i + 1).ToString()).GetComponent<inventoryItems>().setItem(inventory[i]);
+            }
         }
     }
     //Gets and sets
@@ -55,7 +51,7 @@ public class puzzleControl : MonoBehaviour
     //Selects the currently selected inventory item
     public void setInvItem(string item){selectedInvItem = item;}
 
-    void nextPuzzle(){currentPuzzle += 1;}
+    public void nextPuzzle(){currentPuzzle += 1;}
     public void nextPhase(){puzzlePhase += 1;}
 
 
