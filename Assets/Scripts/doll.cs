@@ -13,8 +13,7 @@ public class doll : MonoBehaviour {
     {
         if (player.GetComponent<puzzleControl>().hasDoll())
         {
-            //if(player.GetComponent<puzzleControl>().getPuzzle()>1||(player.GetComponent<puzzleControl>().getPuzzle()==1&&player.GetComponent<puzzleControl>().getPhase()==6))
-                this.gameObject.GetComponent<MenuCTRL>().LoadScene(dollScene);
+            this.gameObject.GetComponent<MenuCTRL>().LoadScene(dollScene);
         }
     }
 }

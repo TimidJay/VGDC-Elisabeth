@@ -435,6 +435,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Room1Disturbed
       objectReference: {fileID: 0}
+    - target: {fileID: 114131179342489450, guid: ea851b72376c6ca45a25eba040dcf143,
+        type: 2}
+      propertyPath: dollScene
+      value: TestRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea851b72376c6ca45a25eba040dcf143, type: 2}
   m_IsPrefabParent: 0

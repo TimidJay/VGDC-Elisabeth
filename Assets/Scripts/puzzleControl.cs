@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class puzzleControl : MonoBehaviour
 {
     private int puzzlePhase, currentPuzzle;
-    private string selectedInvItem, thingClicked, room;
+    private string selectedInvItem, thingClicked;
     
     private string[] inventory;
 
@@ -16,7 +16,6 @@ public class puzzleControl : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(transform.gameObject);
-        room = "Room1Perfect";
         currentPuzzle = 1;
         puzzlePhase = 1;
         //Set to inventory item when you click on that inv slot
@@ -44,6 +43,7 @@ public class puzzleControl : MonoBehaviour
                 GameObject.Find("IB" + (i + 1).ToString()).GetComponent<inventoryItems>().setItem(inventory[i]);
             }
         }
+
     }
     //Gets and sets
     public void setThingClicked(string clicked){thingClicked = clicked;}
@@ -59,7 +59,10 @@ public class puzzleControl : MonoBehaviour
     public int getPhase(){return puzzlePhase;}
     public string getInvItem(){return selectedInvItem;}
     public string[] getInv() { return inventory; }
-    public bool hasDoll() { return true; }
+    public bool hasDoll() {
+        //if(player.GetComponent<puzzleControl>().getPuzzle()>1||(player.GetComponent<puzzleControl>().getPuzzle()==1&&player.GetComponent<puzzleControl>().getPhase()==6))
+        return true;
+    }
 
     public void addToInv(string s)
     {

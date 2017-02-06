@@ -460,6 +460,7 @@ MonoBehaviour:
   afterMessage: Already did the thing
   item: Doll
   neededItem: Empty
+  lastPhase: 0
 --- !u!1 &1006949028
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,6 +638,7 @@ MonoBehaviour:
   afterMessage: Something something
   item: Empty
   neededItem: Doll
+  lastPhase: 0
 --- !u!1 &1131934572
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +867,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1752581526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -882,7 +884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e791c2ee61de4514a9d640fc9919ad60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0}
 --- !u!224 &1958057707 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224736389250764262, guid: ea851b72376c6ca45a25eba040dcf143,
