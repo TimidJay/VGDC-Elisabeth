@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 806748769}
   m_Layer: 5
   m_Name: Bed
-  m_TagString: Untagged
+  m_TagString: Move
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,30 +645,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1321353944
+--- !u!1 &1629886319
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1321353946}
-  - component: {fileID: 1321353945}
-  - component: {fileID: 1321353947}
-  - component: {fileID: 1321353948}
+  - component: {fileID: 1629886322}
+  - component: {fileID: 1629886321}
+  - component: {fileID: 1629886320}
+  - component: {fileID: 1629886324}
+  - component: {fileID: 1629886323}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Elisabeth
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1321353945
+--- !u!95 &1629886320
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629886319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bfd5ba09af1dde4bbd757677b229063, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1629886321
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1321353944}
+  m_GameObject: {fileID: 1629886319}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -694,41 +712,40 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 344f14f178d11534eb47bfb670fa189d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4194474a76ad20544b1a41b919c0791b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!4 &1321353946
+--- !u!4 &1629886322
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1321353944}
+  m_GameObject: {fileID: 1629886319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.16, y: -2.18, z: 0}
-  m_LocalScale: {x: 0.30045202, y: 0.31499547, z: 1}
+  m_LocalPosition: {x: 10.2, y: -2.1, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1321353947
+--- !u!114 &1629886323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1321353944}
+  m_GameObject: {fileID: 1629886319}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e791c2ee61de4514a9d640fc9919ad60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: -1, y: -2.5}
---- !u!114 &1321353948
+--- !u!114 &1629886324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1321353944}
+  m_GameObject: {fileID: 1629886319}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25d280fc22593e8458c1cbb575292c83, type: 3}

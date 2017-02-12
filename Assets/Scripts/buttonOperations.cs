@@ -9,13 +9,14 @@ public class buttonOperations : MonoBehaviour {
     public bool lastPhase;
     private bool isMoveTarget;
     private GameObject girl,textBox;
-
+    private Animator animator;
 	// Use this for initialization
 	void Start () {
         girl = GameObject.FindGameObjectWithTag("Player");
         textBox = GameObject.FindGameObjectWithTag("Textbox");
         isMoveTarget = false;
-	}
+        animator = this.GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

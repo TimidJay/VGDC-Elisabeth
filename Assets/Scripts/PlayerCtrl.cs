@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerCtrl : MonoBehaviour {
     private Vector3 targetPosition;
     private bool isMoving = false;
-    
+    private Animator animator;
     // Update is called once per frame
-   
-    
+
+    public void Start()
+    {
+        animator = this.GetComponent<Animator>();
+    }
     public void Move () {
 
 		//if(Input.GetKeyDown(KeyCode.Mouse0))
