@@ -6,7 +6,7 @@ public class buttonOperations : MonoBehaviour {
 
     public int puzzle, phaseNeeded;
     public string beforeMessage, solvingMessage, afterMessage,item,neededItem;
-    public bool lastPhase;
+    public bool lastPhase,increasesPhase;
     private bool isMoveTarget;
     private GameObject girl,textBox;
     private Animator animator;
@@ -39,22 +39,25 @@ public class buttonOperations : MonoBehaviour {
             girl.GetComponent<PlayerCtrl>().setTargetPosition(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             if (phaseNeeded == girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle() && neededItem == girl.GetComponent<puzzleControl>().getInvItem())
             {
-                if (!lastPhase)
+                if (increasesPhase)
                 {
-                    girl.GetComponent<puzzleControl>().nextPhase();
-                }
-                else
-                {
-                    girl.GetComponent<puzzleControl>().nextPuzzle();
-                }
-                if (neededItem != "Empty")
-                {
-                    girl.GetComponent<puzzleControl>().removeFromInv(neededItem);
-                }
-                girl.GetComponent<puzzleControl>().setInvItem("Empty");
-                if (item != "Empty")
-                {
-                    girl.GetComponent<puzzleControl>().addToInv(item);
+                    if (!lastPhase)
+                    {
+                        girl.GetComponent<puzzleControl>().nextPhase();
+                    }
+                    else
+                    {
+                        girl.GetComponent<puzzleControl>().nextPuzzle();
+                    }
+                    if (neededItem != "Empty")
+                    {
+                        girl.GetComponent<puzzleControl>().removeFromInv(neededItem);
+                    }
+                    girl.GetComponent<puzzleControl>().setInvItem("Empty");
+                    if (item != "Empty")
+                    {
+                        girl.GetComponent<puzzleControl>().addToInv(item);
+                    }
                 }
                 textBox.GetComponent<textControl>().setText(solvingMessage);
             }
