@@ -12,14 +12,35 @@ public class PlayerCtrl : MonoBehaviour {
     {
         animator = this.GetComponent<Animator>();
     }
-    public void Move () {
+    void Update()
+    {
+       /// if (isMoving)
+     //   {
+        //    if (targetPosition.x < transform.position.x)
+        //    {
+          //      animator.SetInteger("Direction", 1);
+           //     if (targetPosition.x == transform.position.x)
+           //     {
+            //        animator.SetInteger("Direction", 3);
+            //    }
+          //  }
+       // }
+    }
 
-		//if(Input.GetKeyDown(KeyCode.Mouse0))
-       // {
-            targetPosition.y = -2;  /// -2 is tentative, all depends on what the set bottom floor is
-      //  }
+    public Animator getAnimator()
+    {
+        return animator;
+    }
+    public void setAnimator(int x)
+    {
+        animator.SetInteger("Direction", x);
+    }
+    public void Move () {
+        targetPosition.y = -2;  /// -2 is tentative, all depends on what the set bottom floor is
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * 5);
-	}
+       
+        }
+    
     public void Stop()
     {
         isMoving = false;
