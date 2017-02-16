@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class buttonOperations : MonoBehaviour {
 
-    public int puzzle, phaseNeeded;
+    public int puzzle, phaseNeeded,listPosition=0;
     public string beforeMessage, solvingMessage, afterMessage,item,neededItem;
-    public bool lastPhase,increasesPhase;
+    public string[] messageList;
+    public bool lastPhase,increasesPhase,disappears;
     private bool isMoveTarget;
     private GameObject girl,textBox;
  
@@ -63,6 +64,10 @@ public class buttonOperations : MonoBehaviour {
                     {
                         girl.GetComponent<puzzleControl>().addToInv(item);
                     }
+                    if (disappears)
+                    {
+                        Destroy(this);
+                    }
                 }
                 textBox.GetComponent<textControl>().setText(solvingMessage);
             }
@@ -72,7 +77,23 @@ public class buttonOperations : MonoBehaviour {
             }
             else if ((phaseNeeded < girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle()) || puzzle < girl.GetComponent<puzzleControl>().getPuzzle())
             {
-                textBox.GetComponent<textControl>().setText(afterMessage);
+                if (afterMessage != " ")
+                {
+                    textBox.GetComponent<textControl>().setText(afterMessage);
+                }
+                else if (afterMessage == "")
+                {
+                }
+                else
+                {
+                    textBox.GetComponent<textControl>().setText(messageList[listPosition]);
+                    if (listPosition == messageList.Length - 1)
+                    {
+                        listPosition = 0;
+                    }
+                    else
+                        listPosition++;
+                }
             }
         }
     }

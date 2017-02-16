@@ -60,8 +60,10 @@ public class puzzleControl : MonoBehaviour
     public string getInvItem(){return selectedInvItem;}
     public string[] getInv() { return inventory; }
     public bool hasDoll() {
-        //if(player.GetComponent<puzzleControl>().getPuzzle()>1||(player.GetComponent<puzzleControl>().getPuzzle()==1&&player.GetComponent<puzzleControl>().getPhase()==6))
-        return true;
+        if (currentPuzzle > 1 || currentPuzzle == 1 && puzzlePhase>= 3)
+            return true;
+        else
+            return false;
     }
 
     public void addToInv(string s)
