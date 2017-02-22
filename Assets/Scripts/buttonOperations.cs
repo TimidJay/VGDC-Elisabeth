@@ -26,13 +26,19 @@ public class buttonOperations : MonoBehaviour {
             girl.GetComponent<PlayerCtrl>().Move();
             if (girl.transform.position == girl.GetComponent<PlayerCtrl>().getPosition())
             {
-                isMoveTarget = false;
-                girl.GetComponent<PlayerCtrl>().Stop();
+				girl.GetComponent<PlayerCtrl> ().setAnimator (3);
+				girl.GetComponent<PlayerCtrl> ().Stop ();
             }
-            if (girl.transform.position.x > girl.GetComponent<PlayerCtrl>().getPosition().x)
+            else if (girl.transform.position.x > girl.GetComponent<PlayerCtrl>().getPosition().x)
             {
                 girl.GetComponent<PlayerCtrl>().setAnimator(1);
+
             }
+			else if (girl.transform.position.x < girl.GetComponent<PlayerCtrl> ().getPosition ().x) {
+				girl.GetComponent<PlayerCtrl> ().setAnimator (0);
+
+			}
+
         }
     }
 

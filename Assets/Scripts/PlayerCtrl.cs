@@ -37,7 +37,7 @@ public class PlayerCtrl : MonoBehaviour {
     }
     public void Move () {
         targetPosition.y = -2;  /// -2 is tentative, all depends on what the set bottom floor is
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * 5);
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * 5);
        
         }
     
