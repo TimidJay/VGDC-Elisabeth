@@ -35,9 +35,13 @@ public class PlayerCtrl : MonoBehaviour {
     {
         animator.SetInteger("Direction", x);
     }
+	public int getInteger() {
+		return animator.GetInteger ("Direction");
+	}
     public void Move () {
-        targetPosition.y = -2;  /// -2 is tentative, all depends on what the set bottom floor is
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * 5);
+		targetPosition.y = -3;
+		  /// -2 is tentative, all depends on what the set bottom floor is
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * 5 );
        
         }
     
