@@ -457,6 +457,7 @@ MonoBehaviour:
   item: Doll
   neededItem: Empty
   lastPhase: 0
+  increasesPhase: 0
 --- !u!61 &806748770
 BoxCollider2D:
   m_ObjectHideFlags: 0
