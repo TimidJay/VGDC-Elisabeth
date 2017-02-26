@@ -155,8 +155,7 @@ MonoBehaviour:
   lastPhase: 0
   increasesPhase: 0
   disappears: 0
-  listScroll: 0
-  showMessage: 0
+  moveTo: 1
 --- !u!61 &65193528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,8 +264,7 @@ MonoBehaviour:
   lastPhase: 0
   increasesPhase: 1
   disappears: 0
-  listScroll: 0
-  showMessage: 0
+  moveTo: 1
 --- !u!61 &107906260
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -729,10 +727,9 @@ MonoBehaviour:
   neededItem: Key
   messageList: []
   lastPhase: 1
-  increasesPhase: 1
+  increasesPhase: 0
   disappears: 0
-  listScroll: 0
-  showMessage: 0
+  moveTo: 1
 --- !u!1 &1414576897
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,8 +790,7 @@ MonoBehaviour:
   lastPhase: 0
   increasesPhase: 0
   disappears: 0
-  listScroll: 0
-  showMessage: 0
+  moveTo: 1
 --- !u!61 &1414576900
 BoxCollider2D:
   m_ObjectHideFlags: 0

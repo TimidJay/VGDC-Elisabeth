@@ -51,7 +51,7 @@ public class puzzleControl : MonoBehaviour
     //Selects the currently selected inventory item
     public void setInvItem(string item){selectedInvItem = item;}
 
-    public void nextPuzzle(){currentPuzzle += 1;}
+    public void nextPuzzle(){currentPuzzle += 1;puzzlePhase = 0; }
     public void nextPhase(){puzzlePhase += 1;}
 
 

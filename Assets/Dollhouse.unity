@@ -198,7 +198,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 50, y: 50}
+  m_Size: {x: 100, y: 100}
 --- !u!1 &1153765644
 GameObject:
   m_ObjectHideFlags: 0
