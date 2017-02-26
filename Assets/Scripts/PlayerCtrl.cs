@@ -39,7 +39,7 @@ public class PlayerCtrl : MonoBehaviour {
 		return animator.GetInteger ("Direction");
 	}
     public void Move () {
-		targetPosition.y = -3;
+		targetPosition.y = -2.5f;
 		  /// -2 is tentative, all depends on what the set bottom floor is
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * 5 );
        
