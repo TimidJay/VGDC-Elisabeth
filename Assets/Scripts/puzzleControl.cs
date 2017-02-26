@@ -9,6 +9,7 @@ public class puzzleControl : MonoBehaviour
     private string selectedInvItem, thingClicked;
     
     private string[] inventory;
+    private int[] bedroomLock;
 
     //I'm hoping that we can just use this one script on the girl to control all "states" of a room based on where in the puzzle the girl is
 
@@ -20,7 +21,11 @@ public class puzzleControl : MonoBehaviour
         puzzlePhase = 1;
         //Set to inventory item when you click on that inv slot
         selectedInvItem = "Empty";
-        
+        bedroomLock =new int[4];
+        for (int i= 0; i < bedroomLock.Length; i++)
+        {
+            bedroomLock[i] = 0;
+        }
         inventory = new string[5];
         for (int i = 0; i < inventory.Length; i++)
         {
@@ -64,6 +69,14 @@ public class puzzleControl : MonoBehaviour
             return true;
         else
             return false;
+    }
+    public int[] getBedLock()
+    {
+        return bedroomLock;
+    }
+    public void setBedLock(int[] i)
+    {
+        bedroomLock = i;
     }
 
     public void addToInv(string s)
