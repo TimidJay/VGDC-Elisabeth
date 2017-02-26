@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class buttonOperations : MonoBehaviour {
 
-    public int puzzle, phaseNeeded,listPosition=0;
+    public int puzzle, phaseNeeded;
     public string beforeMessage, solvingMessage, afterMessage,item,neededItem;
     public string[] messageList;
     public bool lastPhase, increasesPhase, disappears,moveTo=true;
-    private bool isMoveTarget, showMessage = false;
+    private bool isMoveTarget, showMessage = false, cutscene = true;
     private GameObject girl,textBox;
- 
-	// Use this for initialization
-	void Start () {
+    private int listPosition = 0;
+
+    // Use this for initialization
+    void Start () {
         girl = GameObject.FindGameObjectWithTag("Player");
         textBox = GameObject.FindGameObjectWithTag("Textbox");
         isMoveTarget = false;
-        
+
+        StartCoroutine("Introduction");
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (isMoveTarget)
+        if (isMoveTarget && cutscene == false)
         {
             girl.GetComponent<PlayerCtrl>().Move();
             //Code that runs when the girl arrives at target object
@@ -123,21 +125,34 @@ public class buttonOperations : MonoBehaviour {
         }
     }
 
+    IEnumerator Introduction()
+    {
+        //Intro text sequence
+        textBox.GetComponent<textControl>().setText("Mommy and Daddy don't let me go outside");
+        yield return new WaitForSeconds(2.5f);
+        textBox.GetComponent<textControl>().setText("I can only play when strangers visit");
+        yield return new WaitForSeconds(2.5f);
+        textBox.GetComponent<textControl>().setText("No one's visiting, but I want to go play!");
+        cutscene = false;
+    }
 
     void OnMouseDown()
     {
         //Toggles booleans to make the girl move, to show the textbox's message
         //The first conditional checks if the object is one the girl is supposed to move to - will only be false in zoom-ins like that lock
-        if (moveTo)
+        if(cutscene == false)
         {
-            if (!girl.GetComponent<PlayerCtrl>().moving())
+            if (moveTo)
             {
-                isMoveTarget = true;
-                girl.GetComponent<PlayerCtrl>().setTargetPosition(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                if (!girl.GetComponent<PlayerCtrl>().moving())
+                {
+                    isMoveTarget = true;
+                    girl.GetComponent<PlayerCtrl>().setTargetPosition(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                }
             }
+            //showMessage is important in order to prevent text messages from being spammed every update
+            //Without it, the textbox will only display the first message it ever receives. This also prevents a list of messages from changing messages every update.
+            showMessage = true;
         }
-        //showMessage is important in order to prevent text messages from being spammed every update
-        //Without it, the textbox will only display the first message it ever receives. This also prevents a list of messages from changing messages every update.
-        showMessage = true;
     }
 }
