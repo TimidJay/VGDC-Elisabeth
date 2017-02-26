@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 1234263571}
   - component: {fileID: 1234263573}
   - component: {fileID: 1234263572}
+  - component: {fileID: 1234263574}
   m_Layer: 5
   m_Name: RExitZone
   m_TagString: Untagged
@@ -302,6 +303,30 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1234263570}
+--- !u!114 &1234263574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234263570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd44cffb4a387db4d9405ee9f876e53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzle: 0
+  phaseNeeded: 0
+  listPosition: 0
+  beforeMessage: 
+  solvingMessage: 
+  afterMessage: 
+  item: 
+  neededItem: 
+  messageList: []
+  lastPhase: 0
+  increasesPhase: 0
+  disappears: 0
+  moveTo: 1
 --- !u!1 &1276272312
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +580,7 @@ GameObject:
   - component: {fileID: 1934655845}
   - component: {fileID: 1934655847}
   - component: {fileID: 1934655846}
+  - component: {fileID: 1934655848}
   m_Layer: 5
   m_Name: LExit Zone
   m_TagString: Untagged
@@ -613,3 +639,27 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1934655844}
+--- !u!114 &1934655848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934655844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd44cffb4a387db4d9405ee9f876e53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzle: 0
+  phaseNeeded: 0
+  listPosition: 0
+  beforeMessage: 
+  solvingMessage: 
+  afterMessage: 
+  item: 
+  neededItem: 
+  messageList: []
+  lastPhase: 0
+  increasesPhase: 0
+  disappears: 0
+  moveTo: 1

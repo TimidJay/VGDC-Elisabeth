@@ -129,10 +129,12 @@ public class buttonOperations : MonoBehaviour {
     {
         //Intro text sequence
         textBox.GetComponent<textControl>().setText("Mommy and Daddy don't let me go outside");
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         textBox.GetComponent<textControl>().setText("I can only play when strangers visit");
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         textBox.GetComponent<textControl>().setText("No one's visiting, but I want to go play!");
+        yield return new WaitForSeconds(2f);
+        textBox.GetComponent<textControl>().setText("(Click on things to interact!)");
         cutscene = false;
     }
 
