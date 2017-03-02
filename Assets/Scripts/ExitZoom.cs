@@ -8,7 +8,7 @@ public class ExitZoom : MonoBehaviour {
     // Use this for initialization
     private void Start()
     {
-        menu = GameObject.Find("MenuC");
+        menu = GameObject.FindGameObjectWithTag("MenuCtrl");
     }
     private void OnMouseDown()
     {

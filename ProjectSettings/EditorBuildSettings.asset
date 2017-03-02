@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/TestRoom.unity
   - enabled: 1
     path: Assets/Room1Perfect.unity
+  - enabled: 1
+    path: Assets/Dollhouse.unity
