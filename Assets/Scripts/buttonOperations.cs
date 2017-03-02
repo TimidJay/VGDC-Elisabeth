@@ -11,7 +11,8 @@ public class buttonOperations : MonoBehaviour {
     private bool isMoveTarget, showMessage = false, cutscene = true;
     private GameObject girl,textBox;
     private int listPosition = 0;
-    public AudioSource audio;
+    public bool audio;
+
 
     // Use this for initialization
     void Start () {
@@ -81,11 +82,16 @@ public class buttonOperations : MonoBehaviour {
                     else if ((phaseNeeded >= girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle()) || puzzle > girl.GetComponent<puzzleControl>().getPuzzle())
                     {
                         //If the girl hasn't cleared this object's needed phase, this message displays
-                        textBox.GetComponent<textControl>().setText(beforeMessage);
                         if (audio)
                         {
+                            AudioSource audio = GetComponent<AudioSource>();
+
                             audio.Play();
                         }
+                       
+                        textBox.GetComponent<textControl>().setText(beforeMessage);
+                        
+
 
                     }
                     else if ((phaseNeeded < girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle()) || puzzle < girl.GetComponent<puzzleControl>().getPuzzle())

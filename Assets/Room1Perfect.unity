@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 0
   phaseNeeded: 0
-  listPosition: 0
   beforeMessage: 
   solvingMessage: 
   afterMessage: ' '
@@ -253,7 +252,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 1
   phaseNeeded: 4
-  listPosition: 0
   beforeMessage: What treasures lie inside?
   solvingMessage: I'm not allowed to drink this, but it's ok since I'm giving it to
     someone!
@@ -634,6 +632,7 @@ GameObject:
   - component: {fileID: 1392526573}
   - component: {fileID: 1392526576}
   - component: {fileID: 1392526575}
+  - component: {fileID: 1392526577}
   m_Layer: 10
   m_Name: Door
   m_TagString: Untagged
@@ -719,7 +718,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 1
   phaseNeeded: 6
-  listPosition: 0
   beforeMessage: It's locked.
   solvingMessage: Open sesame!
   afterMessage: 
@@ -730,6 +728,86 @@ MonoBehaviour:
   increasesPhase: 0
   disappears: 0
   moveTo: 1
+--- !u!82 &1392526577
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1392526571}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f24453005821a174bb3a6012cffee969, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1414576897
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +858,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzle: 0
   phaseNeeded: 0
-  listPosition: 0
   beforeMessage: 
   solvingMessage: 
   afterMessage: It's Mr. Bear!
@@ -970,7 +1047,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cac60e688ff034b4998188fffa0b7647, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.495
   m_Pitch: 1
   Loop: 0
   Mute: 0
