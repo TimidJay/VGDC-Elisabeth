@@ -11,13 +11,19 @@ public class chestScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        lockDisplay = [0, 0, 0, 0];
+        lockDisplay = new int[4];
+        lockDisplay[0] = 0;
+        lockDisplay[1] = 0;
+        lockDisplay[2] = 0;
+        lockDisplay[3] = 0;
+
+
 
 
 
     }
 
-    public void decreaseLockNum(int: lockPlace)
+    public void decreaseLockNum(int lockPlace)
     {
         if (lockDisplay[lockPlace] != 9)
         {
@@ -25,11 +31,11 @@ public class chestScript : MonoBehaviour {
         }
         else
         {
-            lockDisplay[lockPLace] = 0;
+            lockDisplay[lockPlace] = 0;
         }
         
     }
-	public void increaseLockNum(int: lockPlace)
+	public void increaseLockNum(int lockPlace)
     {
 		if(lockDisplay[lockPlace] != 0)
         {
@@ -42,7 +48,7 @@ public class chestScript : MonoBehaviour {
         }
 	}
 
-    private void checkLock()
+    private bool checkLock()
     {
         if (lockDisplay[0] == 8 && lockDisplay[1] == 3 && lockDisplay[2] == 5 && lockDisplay[3] == 7)
         {
