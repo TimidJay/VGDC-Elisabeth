@@ -11,6 +11,7 @@ public class buttonOperations : MonoBehaviour {
     private bool isMoveTarget, showMessage = false, cutscene = true;
     private GameObject girl,textBox;
     private int listPosition = 0;
+    public AudioSource audio;
 
     // Use this for initialization
     void Start () {
@@ -81,6 +82,11 @@ public class buttonOperations : MonoBehaviour {
                     {
                         //If the girl hasn't cleared this object's needed phase, this message displays
                         textBox.GetComponent<textControl>().setText(beforeMessage);
+                        if (audio)
+                        {
+                            audio.Play();
+                        }
+
                     }
                     else if ((phaseNeeded < girl.GetComponent<puzzleControl>().getPhase() && puzzle == girl.GetComponent<puzzleControl>().getPuzzle()) || puzzle < girl.GetComponent<puzzleControl>().getPuzzle())
                     {
@@ -128,13 +134,16 @@ public class buttonOperations : MonoBehaviour {
     IEnumerator Introduction()
     {
         //Intro text sequence
-        textBox.GetComponent<textControl>().setText("Mommy and Daddy don't let me go outside");
-        yield return new WaitForSeconds(2f);
-        textBox.GetComponent<textControl>().setText("I can only play when strangers visit");
-        yield return new WaitForSeconds(2f);
-        textBox.GetComponent<textControl>().setText("No one's visiting, but I want to go play!");
-        yield return new WaitForSeconds(2f);
-        textBox.GetComponent<textControl>().setText("(Click on things to interact!)");
+        if (cutscene)
+        {
+            textBox.GetComponent<textControl>().setText("Mommy and Daddy don't let me go outside");
+            yield return new WaitForSeconds(2f);
+            textBox.GetComponent<textControl>().setText("I can only play when strangers visit");
+            yield return new WaitForSeconds(2f);
+            textBox.GetComponent<textControl>().setText("No one's visiting, but I want to go play!");
+            yield return new WaitForSeconds(2f);
+            textBox.GetComponent<textControl>().setText("(Click on things to interact!)");
+        }
         cutscene = false;
     }
 
